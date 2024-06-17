@@ -44,7 +44,7 @@ Olá, seja bem-vindo ao meu repositório do meu Plano de Desenvolvimento Individ
 - [x] ~~Flutter Curso 2022 #9 - ErrorLens e lint~~
 - [x] ~~Flutter Curso 2022 #10 - O Scaffold~~
 - [x] ~~Flutter Curso 2022 #11 - Componentizando widgets~~
-- [ ] Flutter Curso 2022 #12 - Primeira e última aula sobre InheritedWidget
+- [x] ~~Flutter Curso 2022 #12 - Primeira e última aula sobre InheritedWidget~~
 - [ ] Flutter Curso 2022 #13 - O StatefulWidget
 - [ ] Flutter Curso 2022 #14 - (Columns e Rows) eixos
 - [ ] Flutter Curso 2022 #15 - (Columns e Rows) prática
