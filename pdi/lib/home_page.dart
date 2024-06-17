@@ -45,7 +45,30 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color.fromRGBO(255, 106, 0, 0.966),
       ),
       body: Center(
-        child: Text("Peki Code: ${counter}")
+        child: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (context, index){
+            return Container(
+              margin: const EdgeInsets.all(12),
+              width: double.infinity,
+              height: 90,
+              color: Colors.orange,
+            );
+          },
+          //SingleChildScrollView(
+        //child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center , //alinhamento cruzado
+          //  children: [
+          //   for(var i = 0; i < 10; i++)
+          //   Container(
+          //     margin: const EdgeInsets.all(12),
+          //     width: double.infinity,
+          //     height: 90,
+          //     color: Colors.orange,
+          //   ),
+          //],
+        ),
         ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color.fromRGBO(255, 106, 0, 0.966),
