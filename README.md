@@ -50,7 +50,7 @@ Olá, seja bem-vindo ao meu repositório do meu Plano de Desenvolvimento Individ
 - [x] ~~Flutter Curso 2022 #15 - (Columns e Rows) prática~~
 - [x] ~~Flutter Curso 2022 #16 - Scroll~~
 - [x] ~~Flutter Curso 2022 #17 - ListView~~
-- [ ] Flutter Curso 2022 #18 - Exemplo prático de uso
+- [x] ~~Flutter Curso 2022 #18 - Exemplo prático de uso~~
 - [ ] Flutter Curso 2022 #19 - Stack
 - [ ] Flutter Curso 2022 #20 - Usando o Image.network
 - [ ] Flutter Curso 2022 #21 - Acessando imagens locais
