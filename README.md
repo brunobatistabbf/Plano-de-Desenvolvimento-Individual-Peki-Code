@@ -51,11 +51,11 @@ Olá, seja bem-vindo ao meu repositório do meu Plano de Desenvolvimento Individ
 - [x] ~~Flutter Curso 2022 #16 - Scroll~~
 - [x] ~~Flutter Curso 2022 #17 - ListView~~
 - [x] ~~Flutter Curso 2022 #18 - Exemplo prático de uso~~
-- [ ] Flutter Curso 2022 #19 - Stack
-- [ ] Flutter Curso 2022 #20 - Usando o Image.network
-- [ ] Flutter Curso 2022 #21 - Acessando imagens locais
-- [ ] Flutter Curso 2022 #22 - Stack como máscara
-- [ ] Flutter Curso 2022 #23 - Stack com Rows e Columns
+- [x] ~~Flutter Curso 2022 #19 - Stack~~
+- [x] ~~Flutter Curso 2022 #20 - Usando o Image.network~~
+- [x] ~~Flutter Curso 2022 #21 - Acessando imagens locais~~
+- [x] ~~Flutter Curso 2022 #22 - Stack como máscara~~
+- [x] ~~Flutter Curso 2022 #23 - Stack com Rows e Columns~~
 
 
 ## Resposnaveis pelo PDI na Peki Code

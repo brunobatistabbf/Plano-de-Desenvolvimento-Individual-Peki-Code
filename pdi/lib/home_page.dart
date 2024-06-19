@@ -41,20 +41,38 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Peki Code"),
-        backgroundColor: Color.fromRGBO(255, 106, 0, 0.966),
+        title: Text("Analytics"),
+        titleTextStyle: TextStyle(color: Colors.blueGrey),
+        backgroundColor: Color.fromRGBO(255, 255, 255, 0.965),
       ),
-      body: Center(
-        child: ListView.builder(
-          itemCount: 10,
-          itemBuilder: (context, index){
-            return Container(
-              margin: const EdgeInsets.all(12),
-              width: double.infinity,
-              height: 90,
-              color: Colors.orange,
-            );
-          },
+       body: Stack(
+        alignment: Alignment.center,
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: Image.network(
+              'https://nordicapis.com/wp-content/uploads/5-KPIs-for-API-Platform-Engineering.jpg',
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            color:  Colors.black.withOpacity(0.75),
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+          ),
+        ],
+        // Center(
+        //   child: ListView.builder(
+        //     itemCount: 10,
+        //     itemBuilder: (context, index){
+        //       return Container(
+       //         margin: const EdgeInsets.all(12),
+        //         width: double.infinity,
+        //         height: 90,
+        //         color: Colors.orange,
+        //       );
+        //     },
           //SingleChildScrollView(
         //child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
@@ -68,17 +86,9 @@ class _HomePageState extends State<HomePage> {
           //     color: Colors.orange,
           //   ),
           //],
-        ),
-        ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromRGBO(255, 106, 0, 0.966),
-        child: Icon(Icons.add),
-        onPressed: (){
-          setState(() {
-            counter++;
-          });
-        }),
-    );
+       ),
+      );
+
   }
 
 }
