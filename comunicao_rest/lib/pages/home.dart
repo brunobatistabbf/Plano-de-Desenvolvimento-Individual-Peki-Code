@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../services/api_service.dart';
 import '../models/posts.dart';
-import 'comments.dart';
+import 'comments_page.dart';
 import 'login.dart';
 
 
@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage>{
   final _apiService = ApiService();
   int? _userId;
   String? _username;
-  List<Post> _posts = [];
+  List<Posts> _posts = [];
 
   @override
   void initState() {
@@ -69,7 +69,7 @@ Widget build(BuildContext context){
       itemBuilder: (context, index){
         final post = _posts[index];
         return ListTile(
-          title: Text(post.title),
+          title: Text(post.name),
           subtitle: Text(post.body),
           onTap: (){
             Navigator.push(
