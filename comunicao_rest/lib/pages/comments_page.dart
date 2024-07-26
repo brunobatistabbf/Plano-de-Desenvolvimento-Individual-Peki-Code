@@ -5,11 +5,10 @@ import '../models/comments.dart';
 class CommentsPage extends StatefulWidget {
   final int postId;
 
-  CommentsPage({required this.postId});
+  const CommentsPage({super.key, required this.postId});
 
- @override
+  @override
   _CommentsPageState createState() => _CommentsPageState();
-
 }
 
 class _CommentsPageState extends State<CommentsPage> {
@@ -17,32 +16,32 @@ class _CommentsPageState extends State<CommentsPage> {
   List<Comments> _comments = [];
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
     _loadComments();
   }
 
-  Future<void> _loadComments() async{
-    final comments = await _apiService.getUserComments(widget.postId);
+  Future<void> _loadComments() async {
+    final comments = await _apiService.getPostComments(widget.postId);
     setState(() {
       _comments = comments;
-    }); 
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Comentários')),
+      appBar: AppBar(title: const Text('Comentários')),
       body: ListView.builder(
         itemCount: _comments.length,
-        itemBuilder: (context, index){
+        itemBuilder: (context, index) {
           final comment = _comments[index];
           return ListTile(
             title: Text(comment.name),
             subtitle: Text(comment.body),
           );
-        }),
+        },
+      ),
     );
   }
-
 }

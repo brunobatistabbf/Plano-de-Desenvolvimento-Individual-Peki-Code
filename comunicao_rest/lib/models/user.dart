@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 User userFromJson(String str) => User.fromJson(json.decode(str));
 String userToJson(User data) => json.encode(data.toJson());
 
@@ -9,7 +10,6 @@ class User {
     String email;
     String phone;
     String website;
-    String company;
 
     User({
         required this.id,
@@ -18,7 +18,6 @@ class User {
         required this.email,
         required this.phone,
         required this.website,
-        required this.company,
     });
 
     factory User.fromJson(Map<String, dynamic> json) => User(
@@ -28,7 +27,6 @@ class User {
         email: json["email"],
         phone: json["phone"],
         website: json["website"],
-        company: json["company"],
     );
 
     Map<String, dynamic> toJson() => {
@@ -38,6 +36,5 @@ class User {
         "email": email,
         "phone": phone,
         "website": website,
-        "company": company,
     };
 }

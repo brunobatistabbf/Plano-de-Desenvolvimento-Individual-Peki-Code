@@ -1,35 +1,32 @@
 import 'dart:convert';
+
 Posts postsFromJson(String str) => Posts.fromJson(json.decode(str));
 String postsToJson(Posts data) => json.encode(data.toJson());
 
 class Posts {
-    int postId;
-    int id;
-    String name;
-    String email;
-    String body;
+  int userId;
+  int id;
+  String title;
+  String body;
 
-    Posts({
-        required this.postId,
-        required this.id,
-        required this.name,
-        required this.email,
-        required this.body,
-    });
+  Posts({
+    required this.userId,
+    required this.id,
+    required this.title,
+    required this.body,
+  });
 
-    factory Posts.fromJson(Map<String, dynamic> json) => Posts(
-        postId: json["postId"],
-        id: json["id"],
-        name: json["name"],
-        email: json["email"],
-        body: json["body"],
-    );
+  factory Posts.fromJson(Map<String, dynamic> json) => Posts(
+    userId: json["userId"],
+    id: json["id"],
+    title: json["title"],
+    body: json["body"],
+  );
 
-    Map<String, dynamic> toJson() => {
-        "postId": postId,
-        "id": id,
-        "name": name,
-        "email": email,
-        "body": body,
-    };
+  Map<String, dynamic> toJson() => {
+    "userId": userId,
+    "id": id,
+    "title": title,
+    "body": body,
+  };
 }
