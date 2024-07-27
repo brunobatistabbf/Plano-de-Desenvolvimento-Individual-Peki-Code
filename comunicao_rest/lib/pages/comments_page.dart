@@ -37,8 +37,14 @@ class _CommentsPageState extends State<CommentsPage> {
         itemBuilder: (context, index) {
           final comment = _comments[index];
           return ListTile(
-            title: Text(comment.name),
-            subtitle: Text(comment.body),
+            title: Text(comment.name, style: const TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+            ),),
+            subtitle: Text(comment.body, style: const TextStyle(
+              color: Color.fromARGB(255, 60, 60, 60),
+              fontSize: 12,
+            ),),
           );
         },
       ),

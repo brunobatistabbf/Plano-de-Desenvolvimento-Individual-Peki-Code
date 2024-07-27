@@ -58,9 +58,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Posts de $_username'),
+        backgroundColor: Colors.lightBlue,
+        title: Text('Posts de $_username',
+        style: const TextStyle(
+          color:  Colors.white,
+        )
+        ),
         actions: [
-          IconButton(onPressed: _logout, icon: const Icon(Icons.logout))
+          IconButton(onPressed: _logout, icon: const Icon(Icons.logout), color: Colors.white,)
         ],
       ),
       body: ListView.builder(
@@ -68,8 +73,12 @@ class _HomePageState extends State<HomePage> {
         itemBuilder: (context, index) {
           final post = _posts[index];
           return ListTile(
-            title: Text(post.title),
-            subtitle: Text(post.body),
+            title: Text(post.title, style: const TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),),
+            subtitle: Text(post.body, textAlign: TextAlign.justify,),
             onTap: () {
               Navigator.push(
                 context,
