@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(onPressed: _logout, icon: const Icon(Icons.logout), color: Colors.white,)
         ],
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         itemCount: _posts.length,
         itemBuilder: (context, index) {
           final post = _posts[index];
@@ -89,7 +89,11 @@ class _HomePageState extends State<HomePage> {
             },
           );
         },
+          separatorBuilder: (context, index) => const Divider(
+          color: Colors.grey,
+          height: 1,
       ),
+      )
     );
   }
 }

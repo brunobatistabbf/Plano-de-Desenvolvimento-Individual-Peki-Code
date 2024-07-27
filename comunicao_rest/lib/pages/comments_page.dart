@@ -31,8 +31,10 @@ class _CommentsPageState extends State<CommentsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Comentários')),
-      body: ListView.builder(
+      appBar: AppBar(
+        title: const Text('Comentários')
+        ),
+      body: ListView.separated(
         itemCount: _comments.length,
         itemBuilder: (context, index) {
           final comment = _comments[index];
@@ -42,12 +44,16 @@ class _CommentsPageState extends State<CommentsPage> {
               fontSize: 14,
             ),),
             subtitle: Text(comment.body, style: const TextStyle(
-              color: Color.fromARGB(255, 60, 60, 60),
+              color: Color.fromARGB(255, 98, 98, 98),
               fontSize: 12,
             ),),
           );
         },
+          separatorBuilder: (context, index) => const Divider(
+          color: Color.fromARGB(255, 220, 220, 220),
+          height: 0.2,
       ),
+      )
     );
   }
 }
