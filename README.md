@@ -58,6 +58,12 @@ Olá, seja bem-vindo ao meu repositório do meu Plano de Desenvolvimento Individ
 - [x] ~~Flutter Curso 2022 #23 - Stack com Rows e Columns~~
 
 
+## Projeto:  Comunicação Rest
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+
+
 ## Resposnaveis pelo PDI na Peki Code
 
 * [Arthur Miranda](https://github.com/devarthurmiranda)
