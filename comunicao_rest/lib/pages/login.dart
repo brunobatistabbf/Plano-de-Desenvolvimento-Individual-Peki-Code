@@ -51,9 +51,9 @@ class _LoginPageState extends State<LoginPage> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color.fromARGB(255, 48, 145, 255),
-              Color.fromARGB(255, 118, 182, 240),
-              Color.fromARGB(255, 153, 197, 232),
+              Color.fromARGB(255, 13, 126, 255),
+              Color.fromARGB(255, 92, 176, 255),
+              Color.fromARGB(255, 145, 205, 255),
             ],
           ),
         ),
