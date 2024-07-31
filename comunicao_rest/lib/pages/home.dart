@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _apiService = ApiService();
+  // ignore: unused_field
   int? _userId;
   String? _username;
   List<Posts> _posts = [];
