@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
-        title: Text('Posts de $_username',
+        title: Text('$_username Posts',
         style: const TextStyle(
           color:  Colors.white,
         )
