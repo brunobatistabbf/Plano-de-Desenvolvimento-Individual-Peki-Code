@@ -4,8 +4,7 @@ import '../services/api_service.dart';
 
 class ContactController extends GetxController {
   final ApiService _apiService = ApiService();
-  var contatinhosList = <Comments>[].obs;
-
+  var contatinhosList = <Contact>[].obs;
 
   @override
   void onInit() {
@@ -20,21 +19,13 @@ class ContactController extends GetxController {
     }
   }
 
-  void addConatinho(Comments contato) async{
+  void addContatinho(Contact contato) async {
     await _apiService.createContato(contato);
     fetchContatinhos();
   }
 
-  void updateContato(Comments contato) async {
+  void updateContato(Contact contato) async {
     await _apiService.updateContato(contato);
     fetchContatinhos();
   }
-
-
-
-
-
-
-
-
 }
