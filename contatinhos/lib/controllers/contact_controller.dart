@@ -12,20 +12,25 @@ class ContactController extends GetxController {
     fetchContatinhos();
   }
 
-  void fetchContatinhos() async {
+  Future<void> fetchContatinhos() async {
     var contatinhos = await _apiService.getContatos();
     if (contatinhos != null) {
       contatinhosList.value = contatinhos;
     }
   }
 
-  void addContatinho(Contact contato) async {
+  Future<void> addContatinho(Contact contato) async {
     await _apiService.createContato(contato);
-    fetchContatinhos();
+    await fetchContatinhos();
   }
 
-  void updateContato(Contact contato) async {
+  Future<void> updateContato(Contact contato) async {
     await _apiService.updateContato(contato);
-    fetchContatinhos();
+    await fetchContatinhos();
+  }
+
+  Future<void> deleteContato(Contact contato) async {
+    await _apiService.deleteContato(contato.id);
+    await fetchContatinhos();
   }
 }

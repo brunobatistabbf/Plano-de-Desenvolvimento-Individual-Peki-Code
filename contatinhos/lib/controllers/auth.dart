@@ -8,11 +8,12 @@ class AuthController extends GetxController {
   final ApiService _apiService = ApiService();
   var isAuthenticated = false.obs;
 
-  Future<void> login(String username, String password) async {
-    final token = await _apiService.login(username, password);
+  Future<void> login(String email, String password) async {
+    final token = await _apiService.login(email, password);
     if (token != null) {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       await prefs.setString('token', token);
+      await prefs.setString('email', email);
       isAuthenticated.value = true;
       Get.offAll(HomeScreen());
     }
@@ -22,9 +23,9 @@ class AuthController extends GetxController {
     final success = await _apiService.signup(nome, email, senha);
     if (success) {
       Get.back();
-      Get.snackbar('Sucesso!', 'Conta criada.');
+      Get.snackbar('Sucesso', 'Conta criada.');
     } else {
-      Get.snackbar('Erro!', 'Falha ao criar conta.');
+      Get.snackbar('Erro', 'Falha ao criar conta.');
     }
   }
 

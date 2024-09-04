@@ -1,24 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TermsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Termos de Uso e Privacidade'),
+        backgroundColor: const Color.fromARGB(255, 155, 105, 255),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Get.back();
+          },
+        ),
+        title: const Text(
+          'Termos de Uso e Privacidade',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               SizedBox(height: 10),
               Text(
                 'Política de Privacidade',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 80, 76, 112),
                 ),
               ),
               SizedBox(height: 16),
@@ -58,7 +70,7 @@ Esperamos que esteja esclarecido e, como mencionado anteriormente, se houver alg
 
 Esta política é efetiva a partir de Agosto de 2024
                 ''',
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 80, 76, 112)),
                 textAlign: TextAlign.justify,
               ),
             ],
